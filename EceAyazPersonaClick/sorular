@@ -1,0 +1,31 @@
+1. What are the operators "&&", "||", "==" and "===" used for? What is the difference between the last two?
+
+&& ve   || veya   == eşittir  === tip ve değer eşittir
+== ile === arasındaki fark şudur bir değişken tanımlarsam;
+Var a = ”10”
+Console.log (a == 10) true çıkar fakat console.log(a === 10)  türleri farklı olduğu için false çıkar true çıkması için console.log(a === ”10”)  olması gerekir.
+
+2.What is DOM? What are the ways to get DOM elements?
+
+Sabit sayfalara interaktiflik ve dinamiklik katılması, html sayfasındaki nesnelere erişmek içeriğini değiştirmek için kullanılır.
+Bir elementi Id sine göre document.getElementById(id) yazarak seçebilirim.
+
+3.How do I access the elements of an iframe loaded from a third-party domain?
+
+Proxy kullanabiliriz.
+
+4.What is scope, and what does "this" mean?
+
+Scope, değişkenlerin görünürlüğünü ve gizliliğini, nerede kullanıp nerede             kullanamayacağımızı bildirmek için kullanılır. This anahtar kelimedir nesneyi ifade eder,değeri değiştirilemez.
+
+5. How would you implement the "Array.prototype.map" method?
+
+Dizinin her elemanı için fonksiyonu çalıştırır ve sonuçlarını yeni bir dizi olarak döner. Mesela ;
+Const array = [1,2,3,4];
+Const map = array.map( x=> x*2)
+ yaptığında cıktı 2,4,6,8 olarak çıkar.
+
+6. What is the difference between synchronous and asynchronous functions in javascript?
+
+Senkron satır satır çalışır ve bir satır yürütme işlemi tamamlamadan diğerine geçmez Asenkron yapıda ise uzun zaman alan , farklı görevdeki işlemler aynı anda gerçekleştirilir.
+

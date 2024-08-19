@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title> Ece Ayaz Swiper </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+    :root{
+        --swiper-navigation-size: 20px;
+    }
+
+    .swiper {
+      width: 80%;
+      height: 100%;
+      margin-right: 0;
+    }
+    .swiper-wrapper{
+        height: 70%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .swiper-button-next{
+        top: 45%;
+        border-radius: 50%;
+        color: black;
+        width: 30px;
+        height: 30px;
+        background-color:white;
+    }
+    .swiper-button-prev{
+        top: 45%;
+        border-radius: 50%;
+        color: black;
+        width: 30px;
+        height: 30px;
+        background-color:white;
+    }
+    .container {
+    display: flex;
+    justify-content: space-between;
+   
+     }
+     .box {
+    padding: 20px;
+    
+    }
+
+    .container-left{
+    background-color: #fff;
+    margin: 30px 15px 0px 40px;
+    float: left;
+    width: 300px;
+   
+    
+  }
+  .cont-text{
+    float: left;
+    width: 100%;
+    background: #fff;
+    height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+    .card {
+    width: 300px;
+    overflow: hidden;
+    margin: 10px;
+    
+    }
+   
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 16px;
+    background-color: #fff;
+}
+
+.card-content h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #333;
+}
+
+.card-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+.text-a{
+   width: 100%;
+    font-size: 21px;
+    font-weight: 800;
+    color: #545554;
+    line-height: 1.3;
+   margin: 0;
+    
+}
+.text-b{
+  font-size: 30px;
+    font-weight: 300;
+    color: #64aeb7;
+    padding-bottom: 20px;
+    box-sizing: border-box; 
+    margin: 0;  
+}
+.text {
+    margin: 0;
+    padding: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.button {
+    display: none;
+    padding: 10px;
+    width: 100%;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    margin-top: 9px;
+}
+
+.card-content:hover .text {
+    display: none;
+}
+
+.card-content:hover .button {
+    display:inline-block;
+}
+
+.button:hover {
+    display: none;
+}
+
+.button:hover ~ .text {
+    display: block;
+}
+
+
+    @media (max-width: 1000px) {
+      .container{
+        display: block;
+      }
+      .box{
+        margin: 10px;
+      }
+     .swiper{
+      width: 90%;
+     
+     }
+     .container-left{
+      width: 90%;
+     }
+     .cont-text{
+      display: inline;
+     }
+     .text-b{
+      font-size: 21px;
+     }
+    }
+    @media (max-width: 600px){
+      .container-left{
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+ <div class="container">
+    <div class="box container-left">
+      <div class="cont-text">
+        <span class="text-a">Bu ürünleri</span> 
+        <span class="text-b">sizin için seçtik</span>
+      </div>
+     
+    </div>
+    <div class="box swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card">
+                <img src="porselen.jpg" alt="Image" class="card-image">
+                <div class="card-content">
+                  <h5>Kütahya Porselen Moderna 8 Parça</h5>
+                  <p class="text">%25 indirim 1189 tl</p>
+                  <button class="button">Sepete Ekle</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+                <img src="porselen.jpg" alt="Image" class="card-image">
+                <div class="card-content">
+                  <h5>Kütahya Porselen Moderna 8 Parça</h5>
+                  <p class="text">%25 indirim 1189 tl</p>
+                  <button class="button">Sepete Ekle</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+                <img src="porselen.jpg" alt="Image" class="card-image">
+                <div class="card-content">
+                  <h5>Kütahya Porselen Moderna 8 Parça</h5>
+                  <p class="text">%25 indirim 1189 tl</p>
+                  <button class="button">Sepete Ekle</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+                <img src="porselen.jpg" alt="Image" class="card-image">
+                <div class="card-content">
+                  <h5>Kütahya Porselen Moderna 8 Parça</h5>
+                  <p class="text">%25 indirim 1189 tl</p>
+                  <button class="button">Sepete Ekle</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+                <img src="porselen.jpg" alt="Image" class="card-image">
+                <div class="card-content">
+                  <h5>Kütahya Porselen Moderna 8 Parça</h5>
+                  <p class="text">%25 indirim 1189 tl</p>
+                  <button class="button">Sepete Ekle</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+            <img src="porselen.jpg" alt="Image" class="card-image">
+            <div class="card-content">
+              <h5>Kütahya Porselen Moderna 8 Parça</h5>
+              <p class="text">%25 indirim 1189 tl</p>
+              <button class="button">Sepete Ekle</button>
+          </div>
+        </div>
+    </div>
+          <div class="swiper-slide">
+            <div class="card">
+                <img src="porselen.jpg" alt="Image" class="card-image">
+                <div class="card-content">
+                    <h5>Kütahya Porselen Moderna 8 Parça</h5>
+                    <p class="text">%25 indirim 1189 tl</p>
+                    <button class="button">Sepete Ekle</button>
+                </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+                <img src="porselen.jpg" alt="Image" class="card-image">
+                <div class="card-content">
+                  <h5>Kütahya Porselen Moderna 8 Parça</h5>
+                  <p class="text">%25 indirim 1189 tl</p>
+                  <button class="button">Sepete Ekle</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+                <img src="porselen.jpg" alt="Image" class="card-image">
+                <div class="card-content">
+                  <h5>Kütahya Porselen Moderna 8 Parça</h5>
+                  <p class="text">%25 indirim 1189 tl</p>
+                  <button class="button">Sepete Ekle</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+                <img src="porselen.jpg" alt="Image" class="card-image">
+                <div class="card-content">
+                  <h5>Kütahya Porselen Moderna 8 Parça</h5>
+                  <p class="text">%25 indirim 1189 tl</p>
+                  <button class="button">Sepete Ekle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+ </div>
+ 
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    function getSlidesPerView() {
+  const width = window.innerWidth;
+  if (width >= 1200) {
+    return 4; 
+  } else if (width >= 768) {
+    return 3; 
+  } else {
+    return 2; 
+  } 
+}
+function initializeSwiper() {
+  var swiper = new Swiper('.swiper', {
+    slidesPerView: getSlidesPerView(),
+    spaceBetween: 5, 
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  window.addEventListener('resize', () => {
+    swiper.params.slidesPerView = getSlidesPerView();
+    swiper.update();
+  });
+}
+document.addEventListener('DOMContentLoaded', initializeSwiper);
+
+    
+  </script>
+</body>
+
+</html>
